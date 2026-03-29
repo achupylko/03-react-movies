@@ -12,10 +12,6 @@ interface MoviesResponse {
 }
 
 export default async function getMovies(query: string): Promise<Movie[]> {
-  if (!query.trim()) {
-    return [];
-  }
-
   const options = {
     method: 'GET',
     headers: {
